@@ -1,31 +1,38 @@
-<section>
-  <h2>Create New Post</h2>
-
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
-
 {{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
+<section class="my-posts">
+  <h2>My Posts</h2>
+  <ul class="dashboard-post-list">
     {{#each posts as |post|}}
     <li>
-      {{> post-info post}}
+      {{> post-snippet post}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
-  </ol>
+  </ul>
 </section>
+{{else}}
+  <section class="my-posts">
+    <h2>No Posts Yet!</h2>
+  </section>
 {{/if}}
+
+
+<section class="createNewPost">
+  <button class="create-new-post">Create New Post</button>
+
+  <form class="new-post-form" hidden>
+    <div>
+      <input type="text" id="post-title" name="post-title" placeholder="My New Title"/>
+    </div>
+    <p class="markdown-reminder">Your post body will be rendered in markdown! Check out <a href="https://www.markdownguide.org/cheat-sheet" target="blank">this</a> style cheat sheet for some quick reminders to get started :)</p>
+    <div>
+      <textarea id="post-body-input" name="post-body"></textarea>
+    </div>
+    <button type="submit" class="publish">Publish!</button>
+    <p class="discard">Discard Draft</p>
+
+  </form>
+</section>
+
 
 <script src="/js/add-post.js"></script>

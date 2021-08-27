@@ -14,11 +14,13 @@ async function upvoteClickHandler(event) {
           'Content-Type': 'application/json'
         }
       });
+      console.log(response);
       
       if (response.ok) {
         document.location.reload();
       } else {
-        alert(response.statusText);
+        //bad practice ://
+        alert('You can only upvote an article once!')
       }
   }
   

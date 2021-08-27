@@ -3,13 +3,9 @@ const User = require('./User');
 const Vote = require('./Vote');
 const Comment = require('./Comment');
 
-User.hasMany(Post, {
-  foreignKey: 'user_id'
-});
+User.hasMany(Post);
 
-Post.belongsTo(User, {
-  foreignKey: 'user_id'
-});
+Post.belongsTo(User);
 
 User.belongsToMany(Post, {
   through: Vote,
@@ -23,36 +19,21 @@ Post.belongsToMany(User, {
   foreignKey: 'post_id'
 });
 
-Vote.belongsTo(User, {
-  foreignKey: 'user_id'
-});
+Vote.belongsTo(User);
 
-Vote.belongsTo(Post, {
-  foreignKey: 'post_id'
-});
+Vote.belongsTo(Post);
 
-User.hasMany(Vote, {
-  foreignKey: 'user_id'
-});
+User.hasMany(Vote);
 
-Post.hasMany(Vote, {
-  foreignKey: 'post_id'
-});
+Post.hasMany(Vote, { onDelete: 'cascade' });
 
-Comment.belongsTo(User, {
-  foreignKey: 'user_id'
-});
+Comment.belongsTo(User);
 
-Comment.belongsTo(Post, {
-  foreignKey: 'post_id'
-});
+Comment.belongsTo(Post);
 
-User.hasMany(Comment, {
-  foreignKey: 'user_id'
-});
+User.hasMany(Comment);
 
-Post.hasMany(Comment, {
-  foreignKey: 'post_id'
-});
+Post.hasMany(Comment, { onDelete: 'cascade' });
+
 
 module.exports = { User, Post, Vote, Comment };

@@ -1,3 +1,13 @@
+function showLoginForm(){
+  document.querySelector('.login-form').hidden = false;
+  document.querySelector('.signup-form').hidden = true;
+}
+
+function showSignUpForm() {
+  document.querySelector('.login-form').hidden = true;
+  document.querySelector('.signup-form').hidden = false;
+}
+
 async function loginFormHandler(event) {
   event.preventDefault();
 
@@ -42,12 +52,15 @@ async function signupFormHandler(event) {
 
     // check the response status
     if (response.ok) {
-      console.log('success');
+      document.location.replace('/dashboard');
     } else {
       alert(response.statusText);
     }
   }
 }
 
+
+document.querySelector('.show-login-button').addEventListener('click', showLoginForm);
+document.querySelector('.show-signup-button').addEventListener('click', showSignUpForm);
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);

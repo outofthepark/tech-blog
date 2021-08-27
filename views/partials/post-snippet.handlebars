@@ -1,0 +1,10 @@
+<article class="post">
+    <div class="post-title">
+        <a class="post-link" href="/post/{{id}}">{{title}}</a>
+    </div>
+    <div class="meta">
+        By <span class="mini-username">{{user.username}}</span> on {{format_date created_at}}
+        |
+        <a class="comment-link" href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>, {{vote_count}} {{format_plural "vote" vote_count}}
+    </div>
+</article>

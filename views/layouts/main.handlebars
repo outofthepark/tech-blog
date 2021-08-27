@@ -9,25 +9,22 @@
 
 <body>
     <div class="wrapper">
-      <header>
-            <h1>
-                <a href="/">Just Tech News</a>
-            </h1>
-            <nav>
+      <header id="site-header">
+            <ul id="site-nav">
+                <li class="nav-item" id="homepage-nav-item"><a href="/">Tech Blog</a></li>
                 {{#if loggedIn}}
-                <a href="/dashboard">dashboard</a>
-                <button id="logout" class="btn-no-style">logout</button>
+                <li class="nav-item"><a href="/dashboard">My Dashboard</a></li>
+                <li class="nav-item" id="logout"><a>Sign Out</a></li>
                 {{else}}
-                <a href="/login">login</a>
+                <li class="nav-item"><a href="/login">Login</a></li>
                 {{/if}}
-            </nav>
+            </ul>
         </header>
       <main>
-        {{{ body }}}
+        <div class="main-page-post-list">
+          {{{ body }}}
+        </div>
       </main>
-      <footer>
-        Thanks for visiting!
-      </footer>
     </div>
 
     {{#if loggedIn}}

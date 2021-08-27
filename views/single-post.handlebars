@@ -1,18 +1,30 @@
-{{> post-info post }}
+<article class="post">
+    <div class="post-title">
+        <h1>{{post.title}}</h1>
+    </div>
+    <div class="post-body">{{{format_html post.post_body}}}</div>
+    <h3 class="post-author">by <span class="mini-username">{{post.user.username}}</span> on {{format_date post.created_at}}</h3>
+    <div class="post-meta">
+        <p> {{post.comments.length}} {{format_plural "comment" post.comments.length}} |</p>
+        <p>{{post.vote_count}} {{format_plural "vote" post.vote_count}}</p> 
+        {{#if loggedIn}}
+        <button type="button" class="upvote-btn">upvote</button>
+        {{/if}}
+    </div>
+</article>
+
+{{> comments post.comments}}
 
 {{#if loggedIn}}
 <form class="comment-form">
     <div>
-        <textarea name="comment-body"></textarea>
+        <textarea name="comment-body" class="comment-body"></textarea>
     </div>
     <div>
         <button type="submit">add comment</button>
-        <button type="button" class="upvote-btn">upvote</button>
     </div>
 </form>
 {{/if}}
-
-{{> comments post.comments}}
 
 
 {{#if loggedIn}}

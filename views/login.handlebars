@@ -1,33 +1,38 @@
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
+<div class="login-div">
+  <form class="login-form">
+    <div class="login-item">
+      <label for="email-login">email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="text" id="email-login" />
+    </div>
+    <div class="login-item">
+      <label for="password-login">password:</label>
+      <input type="password" id="password-login" />
+    </div>
+    <div>
+      <button type="submit">Login!</button>
+      <p class="signup-text">Don't have an account yet?</p>
+      <p class="show-signup-button">Sign Up!</p>
+    </div>
+  </form>
 
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
-  </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
-</form>
+  <form class="signup-form" hidden>
+    <div class="login-item">
+      <label for="username-signup">username:</label>
+      <input type="text" id="username-signup" />
+    </div>
+    <div class="login-item">
+      <label for="email-signup">email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="text" id="email-signup" />
+    </div>
+    <div class="login-item">
+      <label for="password-signup">password:</label>
+      <input type="password" id="password-signup" />
+    </div>
+    <div>
+      <button type="submit">Sign Up!</button>
+      <p class="show-login-button">Back to Login</p>
+    </div>
+  </form>
+</div>
 
 <script src="/js/login.js"></script>

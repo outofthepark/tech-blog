@@ -1,0 +1,229 @@
+main a{
+    text-decoration: none;
+    color: cadetblue;
+}
+
+body{
+    margin: 0px
+}
+
+main{
+    margin: 20px;
+}
+
+#site-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display:flex;
+    align-items: center;
+}
+
+.nav-item{
+    display:flex;
+    align-items: center;
+}
+
+#homepage-nav-item{
+    font-size: 40px;
+}
+
+.nav-item a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 14px;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 30px;
+}
+
+.nav-item p{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+.nav-item a:hover{
+    background-color: cadetblue;
+}
+
+.post-list, .dashboard-post-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.post{
+    margin-bottom: 5px;
+}
+
+.dashboard-post-list{
+    margin-bottom: 20px !important;
+}
+
+.post-list li, .dashboard-post-list li{
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+.post-list li{
+    color: white;
+    background-color: cadetblue;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+
+.post-title{
+    margin-bottom: 10px;
+}
+
+.post-title a{
+    font-size: 20px;
+}
+
+.edit-link, .dashboard-post-list a{
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.post-list a{
+    text-decoration: none;
+    color: white;
+}
+
+main a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+main a:visited{
+    text-decoration: none;
+}
+
+.post h1{
+    font-size: 30px;
+}
+
+.post-body{
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.comment{
+    margin-top: 15px;
+}
+
+.comment-info{
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.mini-username{
+    background-color: #333;
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+}
+
+.comment-form{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.comment-body{
+    width: 700px;
+    height: 70px;
+    margin-bottom: 5px;
+}
+
+button, .upvote-btn, .show-signup-button, .show-login-button, .discard{
+    border-radius: 8px;
+    margin-top: 5px;
+    background-color: cadetblue;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.discard{
+    margin-left: 15px;
+    background-color: #333 !important;
+    display: inline;
+}
+
+.upvote-btn{
+    border-radius: 4px !important;
+    margin-top: 0px !important;
+    padding: 5px !important;
+    font-size: 12px !important;
+}
+
+.post-meta{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+#post-title{
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#post-body-input{
+    width: 95%;
+    height: 100%;
+}
+
+.markdown-reminder{
+    margin-block-end: 0em;
+    margin-block-start: 0em;
+    margin-bottom: 10px;
+}
+
+.signup-text{
+    margin-block-end: 0em;
+    margin-block-start: 0em; 
+}
+
+.login-div{
+    margin-top: 70px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: cadetblue;
+    border-radius: 8px;
+    display: inline-block;
+    position: relative;
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.show-login-button, .show-signup-button, .login-div button{
+    background-color: #333 !important;
+    margin-top: 15px;
+}
+
+.login-div button{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.login-item{
+    margin-top: 10px;
+}
+
+.edit-post-form button{
+    margin-top: 15px !important;;
+    margin-bottom: 15px !important;
+}
